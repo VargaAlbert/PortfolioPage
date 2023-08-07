@@ -1,0 +1,47 @@
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  display: none;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--text-color-primary);
+  padding: 1.5rem;
+  animation: out 0.5s;
+}
+
+footer a:hover {
+  color: var(--text-color-secondary);
+  animation: in 1.5s infinite;
+}
+
+@keyframes in {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-1rem) scale(1.5);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes out {
+  from {
+    transform: translateY(-1rem) scale(1.5);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  footer a {
+    display: block;
+  }
+}

@@ -1,0 +1,200 @@
+header {
+  background: var(--color-ui-tertiary);
+  position: fixed;
+  width: 100%;
+  height: 8vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.header-logo {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color-primary);
+  transition: 0.4s;
+}
+
+.header-logo:hover {
+  color: var(--text-color-secondary);
+  border: 1px solid var(--color-ui-primary);
+}
+
+.header-navigation {
+  display: flex;
+}
+
+.header-checkbox {
+  display: none;
+}
+
+.header-label {
+  display: block;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkbox-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox-button::after,
+.checkbox-button::before,
+.checkbox-line {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--border-color-primary);
+  transition: 0.8s;
+}
+
+.header-label:hover .checkbox-line {
+  transform: scaleX(0.8);
+}
+
+.header-label:hover .checkbox-button::after,
+.header-label:hover .checkbox-button::before {
+  transform: scaleX(0.6);
+}
+
+.header-container {
+  position: absolute;
+  background: var(--color-ui-tertiary);
+  top: 8vh;
+  left: 200vh;
+  right: 0;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.8s;
+}
+
+.header-checkbox:checked~.header-container {
+  left: 0;
+}
+
+.header-items {
+  display: block;
+  width: 100vw;
+  text-align: center;
+  padding: 2rem;
+}
+
+.header-items:hover {
+  background: var(--text-color-primary);
+  color: var(--color-ui-tertiary);
+}
+
+.light-mode-container {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    align-items: stretch;
+    padding: 0 1rem;
+  }
+
+  .header-logo {
+    align-self: center;
+  }
+
+  .header-label {
+    display: none;
+  }
+
+  .header-container {
+    position: static;
+    width: auto;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    transition: 0s;
+  }
+
+  .header-items {
+    width: auto;
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .light-mode-container {
+    align-self: center;
+    margin-top: 0;
+    margin-left: 0.5rem;
+  }
+}
+
+/* TOGGLE GOMB tulajdonságai */
+
+.header-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.header-light-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.header-light-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.header-light-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.header-light-input:checked+.header-light-slider {
+  background-color: var(--text-color-primary);
+}
+
+.header-light-input:focus+.header-light-slider {
+  box-shadow: 0 0 1px var(----text-color-primary);
+}
+
+.header-light-input:checked+.header-light-slider:before {
+  transform: translateX(16px);
+}
+
+.header-light-slider.header-light-round {
+  border-radius: 16px;
+}
+
+.header-light-slider.header-light-round:before {
+  border-radius: 50%;
+}

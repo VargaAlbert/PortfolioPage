@@ -1,0 +1,93 @@
+:root {
+  --canvas-color: rgb(20, 20, 20);
+
+  --text-color-primary: rgb(255, 255, 255);
+  --text-color-secondary: rgb(194, 28, 28);
+
+  --color-ui-primary: rgb(194, 28, 28);
+  --color-ui-secondary: rgb(243, 8, 8);
+  --color-ui-tertiary: rgb(0, 0, 0);
+
+  --border-color-primary: rgb(255, 255, 255);
+  --border-color-secondary: rgb(243, 8, 8);
+  --border-color-tertiary: rgb(185, 185, 185);
+}
+
+.light-mode {
+  --canvas-color: rgb(236, 236, 236);
+
+  --text-color-primary: rgb(0, 0, 0);
+  --text-color-secondary: rgb(194, 28, 28);
+
+  --color-ui-primary: rgb(243, 8, 8);
+  --color-ui-secondary: rgb(194, 28, 28);
+  --color-ui-tertiary: rgb(201, 201, 201);
+
+  --border-color-primary: rgb(0, 0, 0);
+  --border-color-secondary: rgb(194, 28, 28);
+  --border-color-tertiary: rgb(65, 65, 65);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas-color);
+  color: var(--text-color-primary);
+}
+
+.main-container {
+  max-width: 1400px;
+  width: 95%;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}

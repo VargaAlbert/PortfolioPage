@@ -1,0 +1,68 @@
+.kapcsolat {
+  padding: 10%;
+  text-align: center;
+}
+
+.form {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 576px;
+}
+
+.form input,
+.form textarea {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 2px;
+}
+
+.form textarea {
+  height: 10rem;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: 3px solid var(--border-color-secondary);
+}
+
+.form input[type="submit"] {
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: var(--text-color-primary);
+  background: var(--color-ui-secondary);
+
+  transition: background 1s;
+}
+
+.form input[type="submit"]:hover {
+  background: var(--color-ui-primary);
+}
+
+.form input[type="submit"]:focus {
+  outline: none;
+  transform: scale(0.95);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-elem a {
+  font-size: 2rem;
+  padding: 2rem;
+  transition: 0.6s;
+  /* ez azért kell, hogy működjön a transform tulajdonság*/
+  display: block;
+}
+
+.social-elem a:hover {
+  transform: scale(1.5) rotate(360deg);
+  color: var(--color-ui-primary);
+}
