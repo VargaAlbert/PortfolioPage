@@ -103,8 +103,12 @@
   content: "CSS";
 }
 
-.home-icon-container p:last-child::before {
+.home-icon-container p:nth-child(3)::before {
   content: "JS";
+}
+
+.home-icon-container p:last-child::before {
+  content: "SASS";
 }
 
 .home-icon-container:hover p:first-child {
